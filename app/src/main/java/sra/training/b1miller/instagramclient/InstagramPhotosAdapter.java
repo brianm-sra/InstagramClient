@@ -36,11 +36,12 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
         TextView tvUsername = (TextView) convertView.findViewById(R.id.tvUsername);
         TextView tvNumLikes = (TextView) convertView.findViewById(R.id.tvNumLikes);
         ImageView ivPhoto = (ImageView) convertView.findViewById(R.id.ivPhoto);
+        String numLikesStr = getContext().getResources().getString(R.string.likes);
 
         // Insert the model data into each of the view items
         tvUsername.setText(photo.getUsername());
         tvCaption.setText(photo.getCaption());
-        tvNumLikes.setText(photo.getLikesCount() + " likes");
+        tvNumLikes.setText(photo.getLikesCount() + numLikesStr);
         // Clear out the ImageView
         ivPhoto.setImageResource(0);
         // Insert the image using Picasso
