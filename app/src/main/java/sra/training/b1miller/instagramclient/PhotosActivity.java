@@ -45,8 +45,8 @@ public class PhotosActivity extends AppCompatActivity {
         // Fetch the popular photos
         fetchPopularPhotos();
 
-        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     @Override
